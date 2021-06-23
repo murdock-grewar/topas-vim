@@ -1,0 +1,71 @@
+
+includeFile = ConeBeam_Cube.txt
+
+## Simulation Control Paramaters ####################
+This is a multiline comment.
+More lines for this comment.
+
+i:So/ConeBeam/NumberOfHistoriesInRun   = {NUM_HISTORIES}
+
+
+# Bad syntax
+Thing == # Multiple 
+i:Ts/Seed = {RANDOM_SEED} # starting random seed
+i:Ts/Seed = 0.3 
+i:Ts/Seed = 3 + 2 # aoeunth
+d:Ts/Seal = 1.1 nm + 1
+d:Ts/Seal = 1.1 nm + Ts/de nm
+b:Ts/PauseBeforeQuit = "Flo "      
+b:Ts/Hello = 1 "False"
+s:Ge/acerbic/Wow = 5 "e"
+i:Ts/Param/Beginning/With/Integer/3aaoeu = 5
+i:Ts/Param/Beginning/With/Integer/3aaoeu = 5
+s:Ge/acerbic/Wow = 5 "e"
+bv:Ts/Sandwich = 5 "randomstring"
+bv:Ts/Sandwich = "0"
+bv:Ts/Sandwich = 5 3 4
+bv:Ts/Sandwich = 5c 3 4
+bv:Ts/Sandwich = 5c 3 4e
+bv:Ts/Sandwich = 5  3 4e
+iv:Ge/Siren/Winnipeg = 0
+iv:Ge/Siren/Winnipeg = 0 1
+
+# Should succeed
+includeFile = hello
+iv:Ge/Siren/Winnipeg = 1 1
+iv:Ts/Sandwich = 5 3 4
+i:Ts/Seed = 0 # aoeunth
+i:Ts/Seed = 3 + Ts/de # aoeunth
+i:Ts/Seed = Ge/a1 + Ts/de # aoeunth
+i:Ts/Seed = Ge/a1
+i:Ts/Seed = Ts/de + 3 # aoeunth
+d:Ts/Seal = 1.1 nm
+d:Ts/Seal = 1.1 nm  
+d:Ts/Seal =1.1 nm  
+d:Ts/Seal= 1.1 nm  
+d:Ts/Seal=1.1 nm  
+d:Ts/Seal = 1.1 nm
+d:Ts/Seal = 1.1 nm 
+d:Ts/Seal = 1.1 nm
+d:Ts/Seal = 1.1 nm 
+d:Ts/Seal = -1. nm
+d:Ts/Seal = -1 rad
+d:Ts/Seal = 1.1 nm + Ts/de
+d:Ts/Seal = -1.1  + Ts/de nm 
+i:Ts/Seal = 1 + Ts/de
+i:Ts/Seal = -1  + Ts/de 
+d:Ts/Seal = Ts/de deg 
+d:Ts/Seal = Ts/de mm * Ts/De 
+d:Ts/Seal = 1.1 nm + Ts/de
+d:Ts/Seal = Ts/de nm 
+i:Ts/ShowHistoryCountAtInterval = 1000000
+i:Ts/NumberOfThreads = 0 # We'll ask your hardware what it's max is
+s:Ts/PauseBeforeQuit = "False"
+s:Ts/PauseBeforeQuit = "Hello"    
+bv:Ts/Hello = 1 "False"
+sv:Ge/Wow = 5 "e"
+b:Ts/PauseBeforeQuit = "FALSE"  
+b:Ts/PauseBeforeQuit = Ts/PauseBeforeQuit * Ts/B # Unitless for some reason?
+b:Ge/QuitIfOverlapDetected = "True"    # test
+b:Ge/QuitIfOverlapDetected = "True"    #         t:
+
