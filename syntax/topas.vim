@@ -23,7 +23,11 @@ highlight link basicKeywords Tag
 
 " String variables to be used multiple times later
 let s:mainsections  = '%(Ma|El|Is|Ge|So|Ph|Vr|Sc|Gr|Tf|Ts)'
-let s:wordpattern   = '[a-zA-Z][a-zA-Z0-9]*' " For some reason, vim does not like the '\w' keyword of regex...
+" From TOPAS docs, only the following characters are not allowed in a
+" parameter name (which is what the wordpattern is used for):
+" = + - * " ‘ ` TAB
+"let s:wordpattern   = '[a-zA-Z][a-zA-Z0-9]*' 
+let s:wordpattern   = '[^=+\-*"`‘''\t ]+'
 let s:paramsectionpattern = s:mainsections . '/(' . s:wordpattern . '/)*'
 let s:endlinepatt   = '\s*%(#|$)' " Pattern indicating end of line, beginning with whitespace(?) and ending either with a comment or actual end-of-line
 

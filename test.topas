@@ -18,8 +18,7 @@ d:Ts/Seal = 1.1 nm + Ts/de nm
 b:Ts/PauseBeforeQuit = "Flo "      
 b:Ts/Hello = 1 "False"
 s:Ge/acerbic/Wow = 5 "e"
-i:Ts/Param/Beginning/With/Integer/3aaoeu = 5
-i:Ts/Param/Beginning/With/Integer/3aaoeu = 5
+i:Tes/Param/Beginning/With/Integer/3aaoeu = 5
 s:Ge/acerbic/Wow = 5 "e"
 bv:Ts/Sandwich = 5 "randomstring"
 bv:Ts/Sandwich = "0"
@@ -32,6 +31,7 @@ iv:Ge/Siren/Winnipeg = 0 1
 
 # Should succeed
 includeFile = hello
+i:Ts/Param/Beginning/With/Integer/3aaoeu = 5
 iv:Ge/Siren/Winnipeg = 1 1
 iv:Ts/Sandwich = 5 3 4
 i:Ts/Seed = 0 # aoeunth
